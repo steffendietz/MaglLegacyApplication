@@ -28,6 +28,11 @@ class Module
                     $legacyApp = Application\MaglLegacy::getInstance();
 
                     return new \MaglLegacyApplication\Controller\LegacyController($options, $legacyApp);
+                },
+                'MaglLegacyApplication\Controller\LegacyStatic' => function ($sl) {
+                    $options = $sl->getServiceLocator()->get('MaglLegacyApplicationOptions');
+
+                    return new \MaglLegacyApplication\Controller\LegacyStaticController($options);
                 }
             )
         );

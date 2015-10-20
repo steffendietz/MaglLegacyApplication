@@ -26,6 +26,17 @@ return array(
                     'spec' => '/',
                 ),
             ),
+            'legacy-static' => array(
+                'type' => 'Zend\Mvc\Router\Http\Regex',
+                'options' => array(
+                    'regex'    => '(?<static>.+\.(js|css|jpg|png|gif))',
+                    'defaults' => array(
+                        'controller' => 'MaglLegacyApplication\Controller\LegacyStatic',
+                        'action'     => 'index',
+                    ),
+                    'spec' => '/',
+                ),
+            ),
             // example for transferring mod rewrite rules to zf2 routes
 //            'legacy-seo-calendar' => array(
 //                'type' => 'Zend\Mvc\Router\Http\Regex',
