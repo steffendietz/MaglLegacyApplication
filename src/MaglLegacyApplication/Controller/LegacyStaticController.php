@@ -56,8 +56,21 @@ class LegacyStaticController extends AbstractActionController
 			case 'css':
 				$mimeType = 'text/css';
 				break;
+			case 'js':
+				$mimeType = 'text/javascript';
+				break;
+			case 'jpg':
+			case 'jpeg':
+				$mimeType = 'image/jpeg';
+				break;
+			case 'png':
+				$mimeType = 'image/png';
+				break;
+			case 'gif':
+				$mimeType = 'image/gif';
+				break;
 		}
-		if(!empty($mimeType)) {
+		if($mimeType !== null) {
 			$header = new GenericHeader('Content-Type', $mimeType);
 			$response->getHeaders()->addHeader($header);
 		}
