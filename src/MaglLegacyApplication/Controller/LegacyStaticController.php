@@ -56,6 +56,9 @@ class LegacyStaticController extends AbstractActionController
 			case 'css':
 				$mimeType = 'text/css';
 				break;
+			case 'ico':
+				$mimeType = 'image/vnd.microsoft.icon';
+				break;
 			case 'js':
 				$mimeType = 'text/javascript';
 				break;

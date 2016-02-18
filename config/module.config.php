@@ -29,7 +29,7 @@ return array(
             'legacy-static' => array(
                 'type' => 'Zend\Mvc\Router\Http\Regex',
                 'options' => array(
-                    'regex'    => '(?<static>.+\.(js|css|jpg|png|gif|htm|html))',
+                    'regex'    => '(?<static>.+\.(js|css|ico|jpg|png|gif|htm|html))',
                     'defaults' => array(
                         'controller' => 'MaglLegacyApplication\Controller\LegacyStatic',
                         'action'     => 'index',
